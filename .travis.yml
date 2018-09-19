@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before-install:
+  - docker build -t reactonnodeapp -f Dockerfile.dev .
+
+scripts:
+  - docker run reactonnodeapp npm run test -- --coverage
