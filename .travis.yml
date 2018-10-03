@@ -2,6 +2,8 @@ sudo: required
 services:
   - docker
 
+language: bash
+
 before-install:
   - docker build -t reactonnodeapp -f Dockerfile.dev .
 
