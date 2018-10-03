@@ -1,2 +1,0 @@
-from nginx:alpine
-copy --from=builder /app/build /usr/share/nginx/html
