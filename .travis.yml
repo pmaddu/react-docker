@@ -5,5 +5,5 @@ services:
 before-install:
   - docker build -t reactonnodeapp -f Dockerfile.dev .
 
-scripts:
+script:
   - docker run reactonnodeapp npm run test -- --coverage
