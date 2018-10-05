@@ -9,3 +9,17 @@ before_install:
 
 script:
   - docker run reactonnodeapp npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-380691796396"
+  bucket_path: "docker-react"
+  on:
+    branch: master
+  access_key_id: $access_id
+  secret_access_key: 
+    secure: "$secret_key"
+
